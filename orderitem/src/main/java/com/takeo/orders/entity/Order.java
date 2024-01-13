@@ -28,7 +28,7 @@ public class Order {
 
 	@ManyToOne
 	@JoinColumn(name = "user_id")
-	private User user;
+	private Users users;
 
 	@OneToMany(mappedBy = "orders", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private Set<OrderItem> orderItems;
@@ -63,12 +63,12 @@ public class Order {
 		this.orderId = orderId;
 	}
 
-	public User getUser() {
-		return user;
+	public Users getUser() {
+		return users;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setUser(Users user) {
+		this.users = user;
 	}
 
 	public Set<OrderItem> getOrderItems() {

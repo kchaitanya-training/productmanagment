@@ -14,7 +14,7 @@ public class Users {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
+	private int userId;
 	private String name;
 	private String email;
 	private String password;
@@ -25,18 +25,18 @@ public class Users {
 
 	public Users(int id, String name, String email, String password) {
 
-		this.id = id;
+		this.userId = id;
 		this.name = name;
 		this.email = email;
 		this.password = password;
 	}
 
 	public int getId() {
-		return id;
+		return userId;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.userId = id;
 	}
 
 	public String getName() {

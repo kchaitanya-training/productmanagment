@@ -10,7 +10,7 @@ import com.takeo.orders.dto.ProductOrders;
 import com.takeo.orders.entity.Order;
 import com.takeo.orders.entity.OrderItem;
 import com.takeo.orders.entity.Products;
-import com.takeo.orders.entity.User;
+import com.takeo.orders.entity.Users;
 import com.takeo.orders.repository.OrderItemsRepository;
 import com.takeo.orders.repository.OrderRepository;
 
@@ -26,10 +26,10 @@ public class OrderService {
 	public void saveOrders(ProductOrders productOrders) {
 
 		Order order = new Order();
-		User user = new User();
-		user.setUserId(productOrders.getUserId());
+		Users users = new Users();
+		users.setUserId(productOrders.getUserId());
 		//order.setUserId(productOrders.getUserId());
-		order.setUser(user);
+		order.setUser(users);
 		orderRepository.save(order);
 
 		OrderItem orderItems = new OrderItem();
@@ -44,10 +44,10 @@ public class OrderService {
 		}
 
 	}
-	
-	public Order getDetailsByUsId(Integer usreId) {
-		Optional<Order> order=orderRepository.findByUserId(usreId);
-		return order.get();
+
+	public Order getDetailsByuserId(Integer usreId) {
+		//Optional<Order> order=orderRepository.findByUserId(usreId);
+		return null;
 		
 	}
 

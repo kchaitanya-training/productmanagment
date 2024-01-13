@@ -10,5 +10,5 @@ import com.takeo.orders.entity.Order;
 @Repository
 public interface OrderRepository extends JpaRepository<Order, Integer>{
 	
-	public Optional<Order> findByUserId(Integer userId);
+	//public Optional<Order> findByUserId(Integer userId);
 }

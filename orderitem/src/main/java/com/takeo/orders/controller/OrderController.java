@@ -29,7 +29,7 @@ public class OrderController {
 	
 	@GetMapping("/{id}")
 	public Order getDetailsByUseName(@PathVariable("id") Integer userId) {
-		return orderService.getDetailsByUsId(userId);
+		return orderService.getDetailsByuserId(userId);
 	}
 
 }
