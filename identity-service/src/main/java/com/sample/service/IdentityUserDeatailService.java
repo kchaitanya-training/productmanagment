@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import com.sample.config.IdentityUserDetails;
-import com.sample.entity.UserCredential;
+import com.sample.entity.Users;
 import com.sample.repository.UserCredentialRepository;
 
 public class IdentityUserDeatailService implements UserDetailsService{
@@ -18,7 +18,7 @@ public class IdentityUserDeatailService implements UserDetailsService{
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-	Optional<UserCredential> credential=	repository.findByName(username);
+	Optional<Users> credential=	repository.findByName(username);
 		return credential.map(IdentityUserDetails::new).orElseThrow(()->new UsernameNotFoundException("User Not found"));
 	}
 

@@ -4,9 +4,9 @@ import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.sample.entity.UserCredential;
+import com.sample.entity.Users;
 
-public interface UserCredentialRepository extends JpaRepository<UserCredential, Integer>{
+public interface UserCredentialRepository extends JpaRepository<Users, Integer>{
 
-	  Optional<UserCredential> findByName(String username);
+	  Optional<Users> findByName(String username);
 }

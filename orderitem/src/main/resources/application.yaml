@@ -17,6 +17,11 @@ logging:
     root: INFO
     org.springframework: INFO
     org.hibernate: INFO
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/      
 
 
  

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sample.dto.AuthRequest;
-import com.sample.entity.UserCredential;
+import com.sample.entity.Users;
 import com.sample.service.AuthService;
 
 @RestController
@@ -26,7 +26,7 @@ public class AuthController {
 	private AuthenticationManager  authenticationManager;
 
 	@PostMapping("/register")
-	public String addNewUser(@RequestBody UserCredential user) {
+	public String addNewUser(@RequestBody Users user) {
 		return authService.saveUser(user);
 	}
 

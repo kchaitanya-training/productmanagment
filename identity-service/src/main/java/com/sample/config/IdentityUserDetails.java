@@ -5,7 +5,7 @@ import java.util.Collection;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.sample.entity.UserCredential;
+import com.sample.entity.Users;
 
 public class IdentityUserDetails implements UserDetails{
 	
@@ -15,7 +15,7 @@ public class IdentityUserDetails implements UserDetails{
 	
 	
 
-	public IdentityUserDetails(UserCredential userCredential) {
+	public IdentityUserDetails(Users userCredential) {
 	
 		this.username = userCredential.getName();
 		this.password = userCredential.getPassword();
