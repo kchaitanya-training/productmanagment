@@ -18,14 +18,20 @@ spring:
         uri: lb://productsApi  
         predicates:
          - Path=/products/**
+        filters:
+          - AuthenticationFilter
         
       - id:  order
         uri: lb://orderitemApi
         predicates:
          - Path=/order/**
-         
+        filters:
+          - AuthenticationFilter
+            
       - id:  identity-service
         uri: lb://identity-service
         predicates:
-         - Path=/auth/**       
+         - Path=/auth/** 
+        filters:
+          - AuthenticationFilter      
         
