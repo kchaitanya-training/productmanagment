@@ -13,6 +13,17 @@ spring:
     name: api-gateway 
   cloud:
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: 'http://localhost:5173'
+            allowedHeaders:
+              - Content-Type
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE  
       routes:
       - id:  products
         uri: lb://productsApi  
@@ -33,5 +44,6 @@ spring:
         predicates:
          - Path=/auth/** 
         filters:
-          - AuthenticationFilter      
+          - AuthenticationFilter   
+
         
