@@ -59,4 +59,5 @@ REFERENCES `mydb`.`Products` (`ID` )
 ON DELETE NO ACTION
 ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
 USE `mydb` ;
